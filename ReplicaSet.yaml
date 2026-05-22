@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+
+metadata:
+  name: ghee-replicaset
+  labels:
+    app: web
+
+spec:   
+  replicas: 2
+
+  selector:
+    matchLabels:
+      web: ghee
+
+  template:
+    metadata:
+      labels:
+        web: ghee
+
+    spec:   
+      containers:
+        - name: ghee-container
+          image: harshithareddy24/ghee
+          ports:
+            - containerPort: 5656
