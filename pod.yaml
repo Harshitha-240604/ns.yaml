@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: harshitha-pod
+spec:
+  container:
+    - name: harsh-veg
+      image: loc:v1.0.0
+      ports:
+        - containerPort: 3000 
