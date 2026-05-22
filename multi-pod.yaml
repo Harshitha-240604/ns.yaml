@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  container:
+    - name: harshitha-ghee
+      image: harshithareddy24/ghee:v1.0.1
+      ports:
+        - containerPort: 3000 
+  
+    - name: nginx-container
+      image: nginx
+      ports:
+        - containerPort: 80
