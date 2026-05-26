@@ -19,6 +19,9 @@ spec:
           image: harshithareddy24/loc:v1.0.0
           ports:
             - containerPort: 5000
+              envFrom:
+                - configMapRef:
+                    name: harshitha-configmap
 ---
 apiVersion: v1
 kind: Service
