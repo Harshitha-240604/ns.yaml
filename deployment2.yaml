@@ -20,8 +20,10 @@ spec:
           ports:
             - containerPort: 5000
               envFrom:
-                - configMapRef:
-                    name: harshitha-configmap
+            - configMapRef:
+                name: harshitha-configmap
+              secretRef:
+                name: fitness-secret
 ---
 apiVersion: v1
 kind: Service
